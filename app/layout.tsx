@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 
 import './globals.css';
+import { Header } from '@/components/header';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${GeistSans.variable} ${jetbrainsMono.variable} antialiased font-sans`}>
+        <Header />
         {children}
       </body>
     </html>
