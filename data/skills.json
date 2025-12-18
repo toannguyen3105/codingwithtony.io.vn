@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    { "id": "React", "group": "frontend", "value": 10 },
+    { "id": "Next.js", "group": "frontend", "value": 9 },
+    { "id": "TypeScript", "group": "lang", "value": 9 },
+    { "id": "Node.js", "group": "backend", "value": 8 },
+    { "id": "PostgreSQL", "group": "database", "value": 7 },
+    { "id": "Docker", "group": "devops", "value": 6 },
+    { "id": "AWS", "group": "devops", "value": 5 },
+    { "id": "Playwright", "group": "testing", "value": 8 },
+    { "id": "Tailwind", "group": "frontend", "value": 8 },
+    { "id": "Git", "group": "tools", "value": 9 },
+    { "id": "GraphQL", "group": "backend", "value": 6 },
+    { "id": "NestJS", "group": "backend", "value": 7 },
+    { "id": "Figma", "group": "tools", "value": 5 },
+    { "id": "Rust", "group": "lang", "value": 4 },
+    { "id": "Go", "group": "lang", "value": 5 }
+  ],
+  "links": [
+    { "source": "Next.js", "target": "React" },
+    { "source": "TypeScript", "target": "React" },
+    { "source": "Next.js", "target": "Node.js" },
+    { "source": "NestJS", "target": "Node.js" },
+    { "source": "NestJS", "target": "TypeScript" },
+    { "source": "Playwright", "target": "Next.js" },
+    { "source": "Tailwind", "target": "React" },
+    { "source": "PostgreSQL", "target": "Node.js" },
+    { "source": "Docker", "target": "Node.js" },
+    { "source": "GraphQL", "target": "Node.js" }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "basics": {
+    "name": "Dev Name",
+    "label": "Senior Fullstack Engineer",
+    "email": "contact@example.com",
+    "phone": "(+84) 999 999 999",
+    "url": "https://your-portfolio.com",
+    "summary": "I build accessible, pixel-perfect, and performant web experiences using Next.js and Modern Web Technologies.",
+    "location": {
+      "city": "Hanoi",
+      "country": "Vietnam"
+    }
+  },
+  "socials": [
+    {
+      "network": "GitHub",
+      "username": "your-github",
+      "url": "https://github.com/your-username"
+    },
+    {
+      "network": "LinkedIn",
+      "username": "your-linkedin",
+      "url": "https://linkedin.com/in/your-username"
+    },
+    {
+      "network": "YouTube",
+      "username": "your-channel",
+      "url": "https://youtube.com/@your-channel"
+    }
+  ],
+  "navigation": [
+    { "name": "Projects", "href": "/projects" },
+    { "name": "Blog", "href": "/blog" },
+    { "name": "About", "href": "/about" }
+  ]
+}
