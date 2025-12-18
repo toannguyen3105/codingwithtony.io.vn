@@ -17,7 +17,31 @@ Focus on usability, navigation, and leveraging existing core features.
   - Update `favicon.ico` and `manifest.json`.
   - Tweak SEO meta tags (OpenGraph image, Title, Description).
 
-## Phase 2: Engagement & Trust
+## Phase 1.5: UI/UX & Mobile Polish (Completed)
+
+- [x] **Standardize Layouts**
+  - Create reusable `SectionHeader` for consistent typography.
+  - Normalize section padding (`py-20`).
+- [x] **Mobile Experience**
+  - Fix alignment in Experience timeline to prevent cutting off content.
+  - Wrap `SkillNetwork` in container for proper centering.
+
+## Phase 3: Header Revamp (Completed)
+
+- [x] **Branding Upgrade**
+  - Replace text name with Avatar/Logo + Name.
+  - Add visual distinction for the brand area.
+- [x] **Advanced Navigation**
+  - Add "Active State" indicators (e.g., motion underline).
+  - Add icons to mobile menu items.
+- [x] **Action Area**
+  - Add separated **Resume/CV** button (Primary CTA).
+  - Integrate Social Icons (GitHub/LinkedIn) directly into Header.
+- [x] **Visual Polish**
+  - Enhance Glassmorphism effect (blur + border).
+  - Increase height for better touch targets.
+
+## Phase 4: Engagement & Trust
 
 Focus on content depth and social proof to establish seniority.
 

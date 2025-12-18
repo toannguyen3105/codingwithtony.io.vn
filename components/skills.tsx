@@ -3,20 +3,18 @@
 import { Marquee } from '@/components/ui/marquee';
 import config from '@/data/config.json';
 
+import { SectionHeader } from '@/components/section-header';
+
 export function Skills() {
   const { skills } = config;
 
   return (
     <section className="py-20" id="skills">
       <div className="container px-4 md:px-6">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Skills & Technologies
-          </h2>
-          <p className="mx-auto max-w-[700px] text-muted-foreground">
-            A glance at the technologies I work with.
-          </p>
-        </div>
+        <SectionHeader
+          title="Skills & Technologies"
+          description="A glance at the technologies I work with."
+        />
 
         <div className="relative flex h-[100px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl">
           <Marquee pauseOnHover className="[--duration:20s]">

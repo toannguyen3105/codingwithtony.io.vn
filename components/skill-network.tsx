@@ -36,39 +36,43 @@ export function SkillNetwork() {
   const arcs = pie(data);
 
   return (
-    <div className="flex flex-col items-center justify-center py-10">
-      <h3 className="mb-6 text-2xl font-semibold">Skill Distribution</h3>
-      <div className="relative">
-        <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-          <g transform={`translate(${width / 2},${height / 2})`}>
-            {arcs.map((d: unknown, i: number) => (
-              <motion.path
-                key={i}
-                d={arc(d) || undefined}
-                fill={(d as { data: SkillData }).data.color}
-                initial={{ pathLength: 0, opacity: 0 }}
-                animate={{ pathLength: 1, opacity: 1 }}
-                transition={{ duration: 1.5, delay: i * 0.2, ease: 'easeOut' }}
-                stroke="none"
-              />
+    <section className="py-20">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center">
+          <h3 className="mb-6 text-2xl font-semibold">Skill Distribution</h3>
+          <div className="relative">
+            <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+              <g transform={`translate(${width / 2},${height / 2})`}>
+                {arcs.map((d: unknown, i: number) => (
+                  <motion.path
+                    key={i}
+                    d={arc(d) || undefined}
+                    fill={(d as { data: SkillData }).data.color}
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ pathLength: 1, opacity: 1 }}
+                    transition={{ duration: 1.5, delay: i * 0.2, ease: 'easeOut' }}
+                    stroke="none"
+                  />
+                ))}
+              </g>
+            </svg>
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+              <span className="text-3xl font-bold">100%</span>
+              <span className="text-sm text-muted-foreground">Dedication</span>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            {data.map((item) => (
+              <div key={item.label} className="flex items-center gap-2">
+                <div className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />
+                <span className="text-sm font-medium">{item.label}</span>
+                <span className="text-xs text-muted-foreground">{item.value}%</span>
+              </div>
             ))}
-          </g>
-        </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-          <span className="text-3xl font-bold">100%</span>
-          <span className="text-sm text-muted-foreground">Dedication</span>
+          </div>
         </div>
       </div>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        {data.map((item) => (
-          <div key={item.label} className="flex items-center gap-2">
-            <div className="h-3 w-3 rounded-full" style={{ backgroundColor: item.color }} />
-            <span className="text-sm font-medium">{item.label}</span>
-            <span className="text-xs text-muted-foreground">{item.value}%</span>
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }

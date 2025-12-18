@@ -4,26 +4,20 @@ import { motion } from 'framer-motion';
 import { Calendar, Building2 } from 'lucide-react';
 import config from '@/data/config.json';
 
+import { SectionHeader } from '@/components/section-header';
+
 export function Experience() {
   const { work } = config;
 
   return (
     <section className="py-20">
       <div className="container px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 text-center"
-        >
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Work Experience</h2>
-          <p className="mx-auto max-w-[700px] text-muted-foreground">
-            My professional journey and key achievements in the tech industry.
-          </p>
-        </motion.div>
+        <SectionHeader
+          title="Work Experience"
+          description="My professional journey and key achievements in the tech industry."
+        />
 
-        <div className="relative mx-auto max-w-4xl border-l border-muted/50 pl-8 ml-4 md:ml-auto">
+        <div className="relative mx-auto max-w-4xl border-l border-muted/50 pl-6 ml-3 md:pl-8 md:ml-auto">
           {work.map((job, index) => (
             <motion.div
               key={`${job.company}-${index}`}
@@ -33,7 +27,7 @@ export function Experience() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="relative mb-12 last:mb-0"
             >
-              <div className="absolute -left-[41px] flex h-5 w-5 items-center justify-center rounded-full bg-background ring-4 ring-muted">
+              <div className="absolute -left-[29px] md:-left-[41px] flex h-5 w-5 items-center justify-center rounded-full bg-background ring-4 ring-muted">
                 <div className="h-2 w-2 rounded-full bg-primary" />
               </div>
 
