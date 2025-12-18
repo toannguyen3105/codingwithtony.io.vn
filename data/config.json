@@ -1,0 +1,95 @@
+{
+  "basics": {
+    "name": "Tony Nguyen",
+    "label": "Senior Engineer",
+    "email": "contact@codingwithtony.io.vn",
+    "phone": "(+84) 36 362 9810",
+    "url": "https://codingwithtony.io.vn",
+    "summary": "Building scalable web apps and tools with React, Next.js, Golang, and Python. Recently focused on building AI-powered applications.",
+    "location": {
+      "city": "Hanoi",
+      "country": "Vietnam"
+    }
+  },
+  "work": [
+    {
+      "company": "Tech Solutions Inc.",
+      "position": "Senior Frontend Engineer",
+      "startDate": "2022",
+      "endDate": "Present",
+      "summary": "Leading the frontend team in building a modern SaaS platform.",
+      "highlights": [
+        "Architected and implemented a new design system using Shadcn UI.",
+        "Improved site performance by 40% through code splitting and optimization.",
+        "Mentored junior developers and conducted code reviews."
+      ]
+    },
+    {
+      "company": "Creative Agency",
+      "position": "Frontend Developer",
+      "startDate": "2020",
+      "endDate": "2022",
+      "summary": "Developed pixel-perfect websites for various clients.",
+      "highlights": [
+        "Built responsive websites using React and Tailwind CSS.",
+        "Collaborated with designers to ensure design fidelity.",
+        "Integrated CMS solutions for easier content management."
+      ]
+    }
+  ],
+  "socials": [
+    {
+      "network": "GitHub",
+      "username": "toannguyen3105",
+      "url": "https://github.com/toannguyen3105"
+    },
+    {
+      "network": "LinkedIn",
+      "username": "codingwithtony",
+      "url": "https://linkedin.com/in/codingwithtony"
+    },
+    {
+      "network": "YouTube",
+      "username": "CodingWithTony",
+      "url": "https://youtube.com/@codingwithtony"
+    }
+  ],
+  "skills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Python",
+    "PostgresQL",
+    "Shopify",
+    "Docker",
+    "AWS",
+    "Figma",
+    "CI/CD"
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Dashboard",
+      "description": "A comprehensive dashboard for managing products, orders, and analytics. Built with Next.js App Router and Shadcn UI.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["Next.js", "TypeScript", "Tailwind", "Recharts"]
+    },
+    {
+      "name": "SaaS Starter Kit",
+      "description": "An opinionated starter kit for building SaaS applications with authentication, billing, and multi-tenancy support.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["React", "Supabase", "Stripe", "Turborepo"]
+    },
+    {
+      "name": "AI Content Generator",
+      "description": "A tool leveraging OpenAI's API to help users generate marketing copy and blog posts efficiently.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["OpenAI API", "Edge Functions", "Redis"]
+    }
+  ],
+  "navigation": [
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Skills", "href": "#skills" },
+    { "name": "Contact", "href": "mailto:contact@codingwithtony.io.vn" }
+  ]
+}

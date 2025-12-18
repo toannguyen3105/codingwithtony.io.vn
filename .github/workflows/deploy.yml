@@ -1,0 +1,119 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: GHCR_PAT,GHCR_USER
+          script: |
+            export GHCR_PAT=${{ secrets.GHCR_PAT }}
+            export GHCR_USER=${{ github.actor }}
+            # UPDATE THIS PATH to your actual project directory on VPS
+            cd /opt/apps/codingwithtony.io.vn
+            ./scripts/deploy.sh
+
+  notify:
+    needs: [build-and-push, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Notify Discord
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          BUILD_STATUS: ${{ needs.build-and-push.result }}
+          DEPLOY_STATUS: ${{ needs.deploy.result }}
+        run: |
+          if [ "$BUILD_STATUS" == "failure" ]; then
+            EMOJI="❌"
+            COLOR=15158332
+            DESCRIPTION="Build and Push Docker image failed."
+            STATUS="failure"
+          elif [ "$DEPLOY_STATUS" == "failure" ]; then
+            EMOJI="❌"
+            COLOR=15158332
+            DESCRIPTION="Deployment to VPS failed."
+            STATUS="failure"
+          elif [ "$DEPLOY_STATUS" == "success" ]; then
+            EMOJI="✅"
+            COLOR=3066993
+            DESCRIPTION="Deployment to VPS completed successfully."
+            STATUS="success"
+          else
+            EMOJI="⚠️"
+            COLOR=16776960
+            DESCRIPTION="Workflow finished with unknown status (Build: $BUILD_STATUS, Deploy: $DEPLOY_STATUS)."
+            STATUS="unknown"
+          fi
+
+          if [ -z "$DISCORD_WEBHOOK" ]; then
+            echo "DISCORD_WEBHOOK not set, skipping notification."
+            exit 0
+          fi
+
+          curl -H "Content-Type: application/json" \
+            -d "{
+              \"username\": \"GitHub Actions\",
+              \"avatar_url\": \"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\",
+              \"embeds\": [{
+                \"title\": \"$EMOJI Deployment Status: $STATUS\",
+                \"color\": $COLOR,
+                \"description\": \"$DESCRIPTION\",
+                \"fields\": [
+                  { \"name\": \"Repository\", \"value\": \"${{ github.repository }}\", \"inline\": true },
+                  { \"name\": \"Branch\", \"value\": \"${{ github.ref_name }}\", \"inline\": true },
+                  { \"name\": \"Actor\", \"value\": \"${{ github.actor }}\", \"inline\": true }
+                ],
+                \"footer\": { \"text\": \"codingwithtony.io.vn\" },
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }]
+            }" \
+            $DISCORD_WEBHOOK

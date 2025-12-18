@@ -1,0 +1,21 @@
+services:
+  client:
+    container_name: codingwithtony-client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    image: ghcr.io/toannguyen3105/codingwithtony.io.vn:latest
+    networks:
+      - web_network
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.codingwithtony-client.rule=Host(`codingwithtony.io.vn`)'
+      - 'traefik.http.routers.codingwithtony-client.entrypoints=websecure'
+      - 'traefik.http.routers.codingwithtony-client.tls.certresolver=myresolver'
+      - 'traefik.http.services.codingwithtony-client.loadbalancer.server.port=3000'
+      - 'traefik.docker.network=web_network'
+
+networks:
+  web_network:
+    external: true
