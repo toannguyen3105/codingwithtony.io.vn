@@ -161,3 +161,9 @@
     @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
   }
 }
+
+@layer utilities {
+  .container {
+    @apply mx-auto;
+  }
+}
