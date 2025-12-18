@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+import { TypingAnimation } from '@/components/ui/typing-animation';
 import config from '@/data/config.json';
 
 export function Hero() {
@@ -17,37 +19,37 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-background shadow-xl"
+          className="relative mb-8 h-[120px] w-[120px] overflow-hidden rounded-full border-4 border-white/10 shadow-lg md:h-[160px] md:w-[160px]"
         >
-          {/* Placeholder for avatar - using a gradient for now if no image is available, 
-               or we could use a standard placeholder from a service. 
-               For this demo, I'll use a standard placeholder or just a div color if 
-               we want to avoid external dependencies, but next/image expects a slightly different setup.
-               Let's assume there might be an avatar.png in public later, 
-               but for now let's use a reliable placeholder service or a local asset if it existed.
-               Since I can't check local assets easily without listing, I'll use a text fallback or a generic placeholder.
-           */}
-          <div className="flex h-full w-full items-center justify-center bg-zinc-200 text-3xl font-bold dark:bg-zinc-800">
-            {basics.name.charAt(0)}
-          </div>
+          <Image
+            src="https://placehold.co/400x400/png?text=Tony+Headshot"
+            alt={basics.name}
+            fill
+            className="object-cover"
+            priority
+          />
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
+          className="space-y-2"
         >
-          <h1 className="text-4xl font-bold tracking-tight md:text-6xl text-foreground">
-            {basics.name}
-          </h1>
-          <p className="mt-4 text-xl text-muted-foreground md:text-2xl">{basics.label}</p>
+          <TypingAnimation
+            text={basics.name}
+            className="text-4xl font-bold tracking-tight text-foreground md:text-6xl"
+          />
+          <p className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
+            {basics.label}
+          </p>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed"
+          className="mt-6 max-w-2xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-300"
         >
           {basics.summary}
         </motion.p>
@@ -56,9 +58,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <Button asChild size="lg" className="rounded-full">
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full transition-all duration-300 hover:scale-105 hover:bg-primary/90"
+          >
             <Link href={`mailto:${basics.email}`}>
               <Mail className="mr-2 h-4 w-4" />
               Contact Me

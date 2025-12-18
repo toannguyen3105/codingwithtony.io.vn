@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { ThemeToggle } from '@/components/theme-toggle';
 import config from '@/data/config.json';
 import { cn } from '@/lib/utils';
 
@@ -37,6 +38,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
@@ -45,44 +47,49 @@ export function Header() {
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold">{basics.name}</span>
             </Link>
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="pr-0">
-                <SheetHeader className="px-7">
-                  <SheetTitle className="text-left">Navigation</SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col space-y-3 mt-4 px-7">
-                  <Link
-                    href="/"
-                    className={cn(
-                      'block px-2 py-1 text-lg',
-                      pathname === '/' ? 'font-bold text-primary' : 'text-muted-foreground',
-                    )}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  {navigation.map((item) => (
+            <div className="flex gap-2">
+              <ThemeToggle />
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="pr-0">
+                  <SheetHeader className="px-7">
+                    <SheetTitle className="text-left">Navigation</SheetTitle>
+                  </SheetHeader>
+                  <div className="flex flex-col space-y-3 mt-4 px-7">
                     <Link
-                      key={item.href}
-                      href={item.href}
+                      href="/"
                       className={cn(
                         'block px-2 py-1 text-lg',
-                        pathname === item.href ? 'font-bold text-primary' : 'text-muted-foreground',
+                        pathname === '/' ? 'font-bold text-primary' : 'text-muted-foreground',
                       )}
                       onClick={() => setIsOpen(false)}
                     >
-                      {item.name}
+                      Home
                     </Link>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={cn(
+                          'block px-2 py-1 text-lg',
+                          pathname === item.href
+                            ? 'font-bold text-primary'
+                            : 'text-muted-foreground',
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>

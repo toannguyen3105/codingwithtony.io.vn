@@ -1,16 +1,42 @@
 {
   "basics": {
     "name": "Tony Nguyen",
-    "label": "Senior ReactJS Engineer",
+    "label": "Senior Engineer",
     "email": "contact@codingwithtony.io.vn",
-    "phone": "(+84) 123 456 789",
+    "phone": "(+84) 36 362 9810",
     "url": "https://codingwithtony.io.vn",
-    "summary": "Experienced Senior ReactJS Engineer with a passion for building scalable, high-performance web applications. Expert in the React ecosystem, Next.js, and modern TypeScript patterns. Dedicated to clean code, user-centric design, and continuous learning.",
+    "summary": "Building scalable web apps and tools with React, Next.js, Golang, and Python. Recently focused on building AI-powered applications.",
     "location": {
       "city": "Hanoi",
       "country": "Vietnam"
     }
   },
+  "work": [
+    {
+      "company": "Tech Solutions Inc.",
+      "position": "Senior Frontend Engineer",
+      "startDate": "2022",
+      "endDate": "Present",
+      "summary": "Leading the frontend team in building a modern SaaS platform.",
+      "highlights": [
+        "Architected and implemented a new design system using Shadcn UI.",
+        "Improved site performance by 40% through code splitting and optimization.",
+        "Mentored junior developers and conducted code reviews."
+      ]
+    },
+    {
+      "company": "Creative Agency",
+      "position": "Frontend Developer",
+      "startDate": "2020",
+      "endDate": "2022",
+      "summary": "Developed pixel-perfect websites for various clients.",
+      "highlights": [
+        "Built responsive websites using React and Tailwind CSS.",
+        "Collaborated with designers to ensure design fidelity.",
+        "Integrated CMS solutions for easier content management."
+      ]
+    }
+  ],
   "socials": [
     {
       "network": "GitHub",
@@ -33,8 +59,9 @@
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
-    "Node.js",
-    "GraphQL",
+    "Python",
+    "PostgresQL",
+    "Shopify",
     "Docker",
     "AWS",
     "Figma",
