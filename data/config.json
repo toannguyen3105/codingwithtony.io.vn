@@ -1,11 +1,11 @@
 {
   "basics": {
-    "name": "Dev Name",
-    "label": "Senior Fullstack Engineer",
-    "email": "contact@example.com",
-    "phone": "(+84) 999 999 999",
-    "url": "https://your-portfolio.com",
-    "summary": "I build accessible, pixel-perfect, and performant web experiences using Next.js and Modern Web Technologies.",
+    "name": "Tony Nguyen",
+    "label": "Senior ReactJS Engineer",
+    "email": "contact@codingwithtony.io.vn",
+    "phone": "(+84) 123 456 789",
+    "url": "https://codingwithtony.io.vn",
+    "summary": "Experienced Senior ReactJS Engineer with a passion for building scalable, high-performance web applications. Expert in the React ecosystem, Next.js, and modern TypeScript patterns. Dedicated to clean code, user-centric design, and continuous learning.",
     "location": {
       "city": "Hanoi",
       "country": "Vietnam"
@@ -14,23 +14,55 @@
   "socials": [
     {
       "network": "GitHub",
-      "username": "your-github",
-      "url": "https://github.com/your-username"
+      "username": "toannguyen3105",
+      "url": "https://github.com/toannguyen3105"
     },
     {
       "network": "LinkedIn",
-      "username": "your-linkedin",
-      "url": "https://linkedin.com/in/your-username"
+      "username": "codingwithtony",
+      "url": "https://linkedin.com/in/codingwithtony"
     },
     {
       "network": "YouTube",
-      "username": "your-channel",
-      "url": "https://youtube.com/@your-channel"
+      "username": "CodingWithTony",
+      "url": "https://youtube.com/@codingwithtony"
+    }
+  ],
+  "skills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "GraphQL",
+    "Docker",
+    "AWS",
+    "Figma",
+    "CI/CD"
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Dashboard",
+      "description": "A comprehensive dashboard for managing products, orders, and analytics. Built with Next.js App Router and Shadcn UI.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["Next.js", "TypeScript", "Tailwind", "Recharts"]
+    },
+    {
+      "name": "SaaS Starter Kit",
+      "description": "An opinionated starter kit for building SaaS applications with authentication, billing, and multi-tenancy support.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["React", "Supabase", "Stripe", "Turborepo"]
+    },
+    {
+      "name": "AI Content Generator",
+      "description": "A tool leveraging OpenAI's API to help users generate marketing copy and blog posts efficiently.",
+      "url": "https://github.com/toannguyen3105",
+      "tech": ["OpenAI API", "Edge Functions", "Redis"]
     }
   ],
   "navigation": [
-    { "name": "Projects", "href": "/projects" },
-    { "name": "Blog", "href": "/blog" },
-    { "name": "About", "href": "/about" }
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Skills", "href": "#skills" },
+    { "name": "Contact", "href": "mailto:contact@codingwithtony.io.vn" }
   ]
 }
