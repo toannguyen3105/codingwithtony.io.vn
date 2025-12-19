@@ -2,16 +2,15 @@ import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 
-import './globals.css';
 import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
+import config from '@/data/config.json';
+import './globals.css';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
 });
-
-import config from '@/data/config.json';
 
 export const metadata: Metadata = {
   title: {
@@ -34,8 +33,8 @@ export default function RootLayout({
       <body className={`${GeistSans.variable} ${jetbrainsMono.variable} antialiased font-sans`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Header />

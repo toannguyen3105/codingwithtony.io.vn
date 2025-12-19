@@ -1,11 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FolderGit2, Github, Home, Linkedin, Menu, User, FileText, Youtube } from 'lucide-react';
+import { FileText, FolderGit2, Github, Home, Linkedin, Menu, User, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
@@ -26,18 +26,35 @@ const icons = {
 export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const { navigation, basics, socials } = config;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+    <header
+      className={cn(
+        'fixed top-0 z-50 w-full transition-all duration-300',
+        isScrolled
+          ? 'border-b border-border/40 bg-background/80 backdrop-blur-xl supports-backdrop-filter:bg-background/60 shadow-sm'
+          : 'border-b border-transparent bg-transparent',
+      )}
+    >
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         {/* Logo / Brand */}
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border sm:h-9 sm:w-9">
               <Image
-                src="https://placehold.co/100x100/png?text=Tony"
+                src="/assets/smartlogic-seal-teal-vector.svg"
                 alt={basics.name}
                 fill
                 className="object-cover"
@@ -55,7 +72,13 @@ export function Header() {
               href={item.href}
               className={cn(
                 'relative text-sm font-medium transition-colors hover:text-primary',
-                pathname === item.href ? 'text-foreground' : 'text-muted-foreground',
+                pathname === item.href
+                  ? isScrolled
+                    ? 'text-foreground'
+                    : 'text-white'
+                  : isScrolled
+                    ? 'text-muted-foreground'
+                    : 'text-white/70 hover:text-white',
               )}
             >
               {item.name}
@@ -85,7 +108,10 @@ export function Header() {
                   href={social.url}
                   target="_blank"
                   rel="noreferrer"
-                  className={cn('text-muted-foreground transition-colors hover:text-foreground')}
+                  className={cn(
+                    'transition-colors hover:text-foreground',
+                    isScrolled ? 'text-muted-foreground' : 'text-white/70 hover:text-white',
+                  )}
                 >
                   <Icon className="h-4 w-4" />
                   <span className="sr-only">{social.network}</span>
@@ -94,9 +120,15 @@ export function Header() {
             })}
           </div>
 
-          <div className="h-4 w-[1px] bg-border hidden sm:block"></div>
+          <div className="h-4 w-px bg-border hidden sm:block"></div>
 
-          <ThemeToggle />
+          {/* Theme Toggle */}
+          <ThemeToggle
+            className={cn(
+              'transition-colors hover:text-foreground',
+              isScrolled ? 'text-muted-foreground' : 'text-white/70 hover:text-white',
+            )}
+          />
 
           <Button size="sm" className="hidden sm:flex" asChild>
             <Link href="/resume.pdf" target="_blank">
@@ -108,9 +140,18 @@ export function Header() {
           {/* Mobile Menu Trigger */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="shrink-0 md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  'shrink-0 md:hidden',
+                  isScrolled
+                    ? 'text-foreground hover:text-foreground'
+                    : 'text-white hover:text-white/80',
+                )}
+              >
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col">
@@ -118,7 +159,7 @@ export function Header() {
                 <SheetTitle className="flex items-center gap-2">
                   <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border">
                     <Image
-                      src="https://placehold.co/100x100/png?text=Tony"
+                      src="/assets/smartlogic-seal-teal-vector.svg"
                       alt={basics.name}
                       fill
                       className="object-cover"

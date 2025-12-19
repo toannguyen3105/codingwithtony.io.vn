@@ -9,7 +9,7 @@ export function LoadingOverlay() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Show loading for 2 seconds (or wait for resources)
+    }, 500); // Show loading for 0.5 seconds (or wait for resources)
 
     return () => clearTimeout(timer);
   }, []);
