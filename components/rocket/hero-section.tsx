@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -34,10 +35,15 @@ export function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative z-10 mb-6 flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white"
+        className="relative z-10 mb-6"
       >
-        <Sparkles className="h-4 w-4" />
-        <span>AI-Powered Full Stack Generator</span>
+        <Link
+          href="mailto:contact@codingwithtony.io.vn"
+          className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white transition-transform hover:scale-105 hover:bg-white/20"
+        >
+          <Sparkles className="h-4 w-4" />
+          <span>AI-Powered Full Stack Generator</span>
+        </Link>
       </motion.div>
 
       <motion.h1
@@ -50,15 +56,14 @@ export function HeroSection() {
         Launch it.
       </motion.h1>
 
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="relative z-10 mt-6 max-w-2xl text-lg text-zinc-200 sm:text-xl"
       >
-        Generate full-stack applications with a single prompt. Backend, frontend, and deployment
-        ready in seconds.
-      </motion.p>
+        Build production-ready dashboard, website, landing page, mobile app, internal tool
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
