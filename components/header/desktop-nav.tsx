@@ -29,10 +29,7 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
   return (
     <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
       <NavigationMenu
-        className={cn(
-          'rounded-lg border border-white/10 bg-white/5 px-2 py-1 backdrop-blur-md transition-all',
-          isScrolled && 'bg-background/80 border-border/40',
-        )}
+        className={cn('transition-colors', isScrolled ? 'text-gray-900' : 'text-white')}
       >
         <NavigationMenuList>
           {navigation.map((item) => (
@@ -42,8 +39,11 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
                   href={item.href}
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    'bg-transparent hover:bg-white/10 focus:bg-white/10 data-active:bg-white/10 h-9',
-                    pathname === item.href && 'text-primary',
+                    'h-9 bg-transparent',
+                    isScrolled
+                      ? 'hover:bg-black/5 focus:bg-black/5 data-active:bg-black/5 text-gray-900'
+                      : 'hover:bg-white/10 focus:bg-white/10 data-active:bg-white/10',
+                    pathname === item.href && (isScrolled ? 'text-blue-600' : 'text-primary'),
                   )}
                 >
                   {t(item.name.toLowerCase())}
@@ -54,7 +54,14 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
 
           {/* Resources Dropdown */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10 h-9">
+            <NavigationMenuTrigger
+              className={cn(
+                'h-9 bg-transparent',
+                isScrolled
+                  ? 'hover:bg-black/5 focus:bg-black/5 data-[state=open]:bg-black/5 text-gray-900'
+                  : 'hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10',
+              )}
+            >
               {t('resources')}
             </NavigationMenuTrigger>
             <NavigationMenuContent>

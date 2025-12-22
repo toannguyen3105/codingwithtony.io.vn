@@ -29,7 +29,7 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
           size="icon"
           className={cn(
             'shrink-0 md:hidden',
-            isScrolled ? 'text-foreground hover:text-foreground' : 'text-white hover:text-white/80',
+            isScrolled ? 'text-gray-900 hover:text-black' : 'text-white hover:text-white/80',
           )}
         >
           <Menu className="h-5 w-5" />

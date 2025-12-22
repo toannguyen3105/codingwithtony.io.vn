@@ -25,8 +25,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-6 z-50 w-full transition-all duration-300',
-        isScrolled ? 'top-0' : '',
+        'fixed z-50 w-full transition-all duration-300',
+        isScrolled
+          ? 'top-0 border-b border-gray-200/50 bg-white/80 text-gray-900 shadow-sm backdrop-blur-md supports-[backdrop-fil≥ter]:bg-white/60'
+          : 'top-6 bg-transparent text-white',
       )}
     >
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6">

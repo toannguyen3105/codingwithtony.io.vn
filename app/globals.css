@@ -175,19 +175,15 @@
     @apply bg-background text-foreground;
   }
 
-  /* Custom Scrollbar */
+  /* Hide scrollbar completely */
+  html {
+    scrollbar-width: none;
+  }
+  
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    display: none;
   }
 
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
-  }
 }
 
 @layer utilities {

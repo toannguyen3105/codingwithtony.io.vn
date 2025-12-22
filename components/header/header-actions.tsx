@@ -26,8 +26,7 @@ export function HeaderActions({ isScrolled }: HeaderActionsProps) {
               rel="noreferrer"
               className={cn(
                 'transition-colors hover:text-foreground',
-                'text-white/70 hover:text-white',
-                isScrolled && 'text-muted-foreground',
+                isScrolled ? 'text-gray-600 hover:text-black' : 'text-white/70 hover:text-white',
               )}
             >
               <Icon className="h-4 w-4" />
@@ -38,8 +37,11 @@ export function HeaderActions({ isScrolled }: HeaderActionsProps) {
       </div>
 
       <div className="hidden h-4 w-px bg-border sm:block"></div>
-
-      <Button size="sm" className="hidden sm:flex" asChild>
+      <Button
+        size="sm"
+        className={cn('hidden sm:flex', isScrolled && 'bg-gray-900 text-white hover:bg-gray-800')}
+        asChild
+      >
         <Link href="/resume.pdf" target="_blank">
           <FileText className="mr-2 h-4 w-4" />
           Resume
