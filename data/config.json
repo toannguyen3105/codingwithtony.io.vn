@@ -9,7 +9,8 @@
     "location": {
       "city": "Hanoi",
       "country": "Vietnam"
-    }
+    },
+    "logo": "/assets/logo.svg"
   },
   "work": [
     {

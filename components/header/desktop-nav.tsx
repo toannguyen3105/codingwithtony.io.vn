@@ -15,7 +15,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import config from '@/data/config.json';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib';
 
 interface DesktopNavProps {
   isScrolled: boolean;

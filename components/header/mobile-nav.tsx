@@ -40,12 +40,7 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
         <SheetHeader className="px-4 text-left">
           <SheetTitle className="flex items-center gap-2">
             <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border">
-              <Image
-                src="/assets/smartlogic-seal-teal-vector.svg"
-                alt={basics.name}
-                fill
-                className="object-cover"
-              />
+              <Image src={basics.logo} alt={basics.name} fill className="object-cover" />
             </div>
             <span>{basics.name}</span>
           </SheetTitle>

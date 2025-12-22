@@ -26,7 +26,7 @@ export function HeaderActions({ isScrolled }: HeaderActionsProps) {
               rel="noreferrer"
               className={cn(
                 'transition-colors hover:text-foreground',
-                'text-white/70 hover:text-white', // Consistent styling
+                'text-white/70 hover:text-white',
                 isScrolled && 'text-muted-foreground',
               )}
             >

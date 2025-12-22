@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 import { DesktopNav, HeaderActions, MobileNav } from '@/components/header';
 import config from '@/data/config.json';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +33,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border sm:h-9 sm:w-9">
-              <Image
-                src="/assets/smartlogic-seal-teal-vector.svg"
-                alt={basics.name}
-                fill
-                className="object-cover"
-              />
+              <Image src={basics.logo} alt={basics.name} fill className="object-cover" />
             </div>
             <span className="hidden font-bold tracking-tight sm:inline-block">{basics.name}</span>
           </Link>
