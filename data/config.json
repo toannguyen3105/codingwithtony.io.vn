@@ -89,8 +89,7 @@
     }
   ],
   "navigation": [
-    { "name": "Projects", "href": "#projects" },
-    { "name": "Skills", "href": "#skills" },
-    { "name": "Contact", "href": "mailto:contact@codingwithtony.io.vn" }
+    { "name": "Pricing", "href": "/pricing" },
+    { "name": "Careers", "href": "/careers" }
   ]
 }

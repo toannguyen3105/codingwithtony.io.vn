@@ -1,0 +1,43 @@
+{
+  "Nav": {
+    "projects": "Dự án",
+    "skills": "Kỹ năng",
+    "experience": "Kinh nghiệm",
+    "resume": "Hồ sơ",
+    "contact": "Liên hệ",
+    "about": "Giới thiệu",
+    "home": "Trang chủ",
+    "resources": "Tài nguyên",
+    "blog": "Blog",
+    "blogDesc": "Các bài viết về phát triển web, React và kỹ thuật phần mềm.",
+    "tutorials": "Hướng dẫn",
+    "tutorialsDesc": "Hướng dẫn từng bước xây dựng ứng dụng full-stack.",
+    "newsletter": "Bản tin",
+    "newsletterDesc": "Cập nhật hàng tuần về xu hướng công nghệ và mẹo lập trình.",
+    "caseStudies": "Nghiên cứu",
+    "caseStudiesDesc": "Phân tích sâu về kiến trúc dự án thực tế.",
+    "connect": "Kết nối",
+    "downloadResume": "Tải hồ sơ",
+    "pricing": "Bảng giá",
+    "careers": "Tuyển dụng"
+  },
+  "Hero": {
+    "role": "Kỹ sư ReactJS Cao cấp",
+    "title": "Từ ý tưởng đến Sản phẩm thực tế",
+    "descriptionPrefix": "Xây dựng",
+    "descriptionSuffixes": ["website", "công cụ nội bộ", "nền tảng SaaS", "ứng dụng di động"],
+    "badge": "Kỹ sư Full-Stack Cao cấp & Tư vấn",
+    "placeholder": "Tôi có thể giúp bạn xây dựng gì hôm nay?",
+    "try": "Thử: \"Tôi cần một nền tảng SaaS cho...\" hoặc \"Tôi muốn xây dựng sàn thương mại điện tử cho...\"",
+    "frameworks": "Frameworks",
+    "languages": "Ngôn ngữ",
+    "import": "Import"
+  },
+  "SocialProof": {
+    "title": "ĐƯỢC TIN DÙNG BỞI 500+ LẬP TRÌNH VIÊN"
+  },
+  "Common": {
+    "loading": "Đang tải...",
+    "error": "Đã có lỗi xảy ra"
+  }
+}

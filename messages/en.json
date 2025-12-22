@@ -17,7 +17,9 @@
     "caseStudies": "Case Studies",
     "caseStudiesDesc": "Deep dives into real-world project architectures.",
     "connect": "Connect",
-    "downloadResume": "Download Resume"
+    "downloadResume": "Download Resume",
+    "pricing": "Pricing",
+    "careers": "Careers"
   },
   "Hero": {
     "role": "Senior ReactJS Engineer",
@@ -30,6 +32,9 @@
     "frameworks": "Frameworks",
     "languages": "Languages",
     "import": "Import"
+  },
+  "SocialProof": {
+    "title": "TRUSTED BY 500+ DEVELOPERS"
   },
   "Common": {
     "loading": "Loading...",
