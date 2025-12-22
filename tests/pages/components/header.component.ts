@@ -29,7 +29,10 @@ export class HeaderComponent extends BasePage {
   }
 
   async scrollToTriggerStyleChange() {
-    await this.page.evaluate(() => window.scrollTo(0, 100));
+    await this.page.evaluate(() => {
+      document.body.style.minHeight = '2000px';
+      window.scrollTo(0, 100);
+    });
   }
 
   async scrollToTop() {
