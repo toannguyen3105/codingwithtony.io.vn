@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -21,6 +22,7 @@ interface DesktopNavProps {
 }
 
 export function DesktopNav({ isScrolled }: DesktopNavProps) {
+  const t = useTranslations('Nav');
   const pathname = usePathname();
   const { navigation } = config;
 
@@ -44,7 +46,7 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
                     pathname === item.href && 'text-primary',
                   )}
                 >
-                  {item.name}
+                  {t(item.name.toLowerCase())}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -53,21 +55,21 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
           {/* Resources Dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10 h-9">
-              Resources
+              {t('resources')}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                <ListItem href="/blog" title="Blog">
-                  Articles about web development, React, and software engineering.
+                <ListItem href="/blog" title={t('blog')}>
+                  {t('blogDesc')}
                 </ListItem>
-                <ListItem href="/tutorials" title="Tutorials">
-                  Step-by-step guides to building full-stack applications.
+                <ListItem href="/tutorials" title={t('tutorials')}>
+                  {t('tutorialsDesc')}
                 </ListItem>
-                <ListItem href="/newsletter" title="Newsletter">
-                  Weekly updates on the latest tech trends and coding tips.
+                <ListItem href="/newsletter" title={t('newsletter')}>
+                  {t('newsletterDesc')}
                 </ListItem>
-                <ListItem href="/case-studies" title="Case Studies">
-                  Deep dives into real-world project architectures.
+                <ListItem href="/case-studies" title={t('caseStudies')}>
+                  {t('caseStudiesDesc')}
                 </ListItem>
               </ul>
             </NavigationMenuContent>

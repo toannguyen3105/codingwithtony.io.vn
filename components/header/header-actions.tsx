@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { FileText } from 'lucide-react';
 
-import { ThemeToggle } from '@/components/theme-toggle';
 import { Button } from '@/components/ui/button';
 import config from '@/data/config.json';
 import { cn } from '@/lib/utils';
@@ -39,14 +38,6 @@ export function HeaderActions({ isScrolled }: HeaderActionsProps) {
       </div>
 
       <div className="hidden h-4 w-px bg-border sm:block"></div>
-
-      {/* Theme Toggle */}
-      <ThemeToggle
-        className={cn(
-          'transition-colors hover:text-foreground',
-          isScrolled ? 'text-muted-foreground' : 'text-white/70 hover:text-white',
-        )}
-      />
 
       <Button size="sm" className="hidden sm:flex" asChild>
         <Link href="/resume.pdf" target="_blank">

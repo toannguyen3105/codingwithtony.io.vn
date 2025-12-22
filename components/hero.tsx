@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
-import { TypingAnimation } from '@/components/ui/typing-animation';
+// import { TypingAnimation } from '@/components/ui/typing-animation';
 import config from '@/data/config.json';
 
 export function Hero() {
@@ -36,10 +36,13 @@ export function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="space-y-2"
         >
-          <TypingAnimation
+          <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+            {basics.name}
+          </h1>
+          {/* <TypingAnimation
             text={basics.name}
             className="text-4xl font-bold tracking-tight text-foreground md:text-6xl"
-          />
+          /> */}
           <p className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
             {basics.label}
           </p>

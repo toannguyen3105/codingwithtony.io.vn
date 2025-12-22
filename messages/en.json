@@ -1,0 +1,38 @@
+{
+  "Nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "resume": "Resume",
+    "contact": "Contact",
+    "about": "About",
+    "home": "Home",
+    "resources": "Resources",
+    "blog": "Blog",
+    "blogDesc": "Articles about web development, React, and software engineering.",
+    "tutorials": "Tutorials",
+    "tutorialsDesc": "Step-by-step guides to building full-stack applications.",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Weekly updates on the latest tech trends and coding tips.",
+    "caseStudies": "Case Studies",
+    "caseStudiesDesc": "Deep dives into real-world project architectures.",
+    "connect": "Connect",
+    "downloadResume": "Download Resume"
+  },
+  "Hero": {
+    "role": "Senior ReactJS Engineer",
+    "title": "From Idea to Live Product",
+    "descriptionPrefix": "Build production-ready",
+    "descriptionSuffixes": ["website", "internal tool", "SaaS platform", "mobile app"],
+    "badge": "Senior Full-Stack Engineer & Consultant",
+    "placeholder": "What can I build for you today?",
+    "try": "Try: \"I need a SaaS platform for...\" or \"I want to build a marketplace for...\"",
+    "frameworks": "Frameworks",
+    "languages": "Languages",
+    "import": "Import"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  }
+}
