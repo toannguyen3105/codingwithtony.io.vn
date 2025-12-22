@@ -1,36 +1,20 @@
-import { type Page, expect } from '@playwright/test';
+import { type Page, type Locator } from '@playwright/test';
 import { BasePage } from './base.page';
 
 export class LandingPage extends BasePage {
   readonly pageTitle: RegExp = /Tony Nguyen/i;
-  // Browser returns lab(100 0 0) for white in this environment
-  readonly lightModeBgColor: string = 'lab(100 0 0)';
+  readonly darkModeBgColor: string = 'lab(2.42796 -0.0840873 -4.13788)';
   readonly fontPattern: RegExp = /GeistSans|Geist Sans|sans-serif/;
+  readonly html: Locator;
+  readonly body: Locator;
 
   constructor(page: Page) {
     super(page);
+    this.html = page.locator('html');
+    this.body = page.locator('body');
   }
 
   async goto() {
     await this.navigate('/');
-  }
-
-  async verifyTitle() {
-    await expect(this.page).toHaveTitle(this.pageTitle);
-  }
-
-  async verifyHtmlTheme(theme: string) {
-    const html = this.page.locator('html');
-    await expect(html).toHaveClass(new RegExp(theme));
-  }
-
-  async verifyBodyBackgroundColor() {
-    const body = this.page.locator('body');
-    await expect(body).toHaveCSS('background-color', this.lightModeBgColor);
-  }
-
-  async verifyFont() {
-    const body = this.page.locator('body');
-    await expect(body).toHaveCSS('font-family', this.fontPattern);
   }
 }
