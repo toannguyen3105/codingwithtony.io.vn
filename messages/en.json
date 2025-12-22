@@ -39,5 +39,22 @@
   "Common": {
     "loading": "Loading...",
     "error": "Something went wrong"
+  },
+  "ErrorPages": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for.",
+      "action": "Go Home"
+    },
+    "forbidden": {
+      "title": "Access Denied",
+      "description": "You do not have permission to view this page.",
+      "action": "Go Back"
+    },
+    "maintenance": {
+      "title": "System Under Maintenance",
+      "description": "We are currently improving our system. Please check back later.",
+      "action": "Refresh"
+    }
   }
 }

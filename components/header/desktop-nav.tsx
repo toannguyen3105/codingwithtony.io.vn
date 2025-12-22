@@ -87,26 +87,29 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
   );
 }
 
-const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWithoutRef<'a'>>(
-  ({ className, title, children, ...props }, ref) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <Link
-            ref={ref}
-            className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-              className,
-            )}
-            {...props}
-            href={props.href as string}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </Link>
-        </NavigationMenuLink>
-      </li>
-    );
-  },
-);
+const ListItem = ({
+  className,
+  title,
+  children,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<'a'>) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className,
+          )}
+          href={href as string}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+};
 ListItem.displayName = 'ListItem';

@@ -39,5 +39,22 @@
   "Common": {
     "loading": "Đang tải...",
     "error": "Đã có lỗi xảy ra"
+  },
+  "ErrorPages": {
+    "notFound": {
+      "title": "Không tìm thấy trang",
+      "description": "Xin lỗi, chúng tôi không tìm thấy trang bạn đang tìm kiếm.",
+      "action": "Về trang chủ"
+    },
+    "forbidden": {
+      "title": "Truy cập bị từ chối",
+      "description": "Bạn không có quyền xem trang này.",
+      "action": "Quay lại"
+    },
+    "maintenance": {
+      "title": "Hệ thống đang bảo trì",
+      "description": "Chúng tôi đang nâng cấp hệ thống. Vui lòng quay lại sau.",
+      "action": "Tải lại trang"
+    }
   }
 }
