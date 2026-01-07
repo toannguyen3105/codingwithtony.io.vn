@@ -1,6 +1,6 @@
 {
   "basics": {
-    "name": "Tony Nguyen",
+    "name": "Tony Nguyen2",
     "label": "Senior Engineer",
     "email": "contact@codingwithtony.io.vn",
     "phone": "(+84) 36 362 9810",
@@ -9,7 +9,8 @@
     "location": {
       "city": "Hanoi",
       "country": "Vietnam"
-    }
+    },
+    "logo": "/assets/logo.svg"
   },
   "work": [
     {
@@ -88,8 +89,7 @@
     }
   ],
   "navigation": [
-    { "name": "Projects", "href": "#projects" },
-    { "name": "Skills", "href": "#skills" },
-    { "name": "Contact", "href": "mailto:contact@codingwithtony.io.vn" }
+    { "name": "Pricing", "href": "/pricing" },
+    { "name": "Careers", "href": "/careers" }
   ]
 }

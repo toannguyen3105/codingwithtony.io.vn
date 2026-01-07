@@ -1,0 +1,160 @@
+{
+  "Nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "resume": "Resume",
+    "contact": "Contact",
+    "about": "About",
+    "home": "Home",
+    "resources": "Resources",
+    "blog": "Blog",
+    "blogDesc": "Articles about web development, React, and software engineering.",
+    "tutorials": "Tutorials",
+    "tutorialsDesc": "Step-by-step guides to building full-stack applications.",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Weekly updates on the latest tech trends and coding tips.",
+    "caseStudies": "Case Studies",
+    "caseStudiesDesc": "Deep dives into real-world project architectures.",
+    "connect": "Connect",
+    "downloadResume": "Download Resume",
+    "pricing": "Pricing",
+    "careers": "Careers"
+  },
+  "Hero": {
+    "role": "Senior ReactJS Engineer",
+    "title": "From Idea to Live Product",
+    "descriptionPrefix": "Build production-ready",
+    "descriptionSuffixes": ["website", "internal tool", "SaaS platform", "mobile app"],
+    "badge": "Senior Full-Stack Engineer & Consultant",
+    "placeholder": "What can I build for you today?",
+    "try": "Try: \"I need a SaaS platform for...\" or \"I want to build a marketplace for...\"",
+    "frameworks": "Frameworks",
+    "languages": "Languages",
+    "import": "Import"
+  },
+  "SocialProof": {
+    "title": "TRUSTED BY 500+ DEVELOPERS"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Something went wrong"
+  },
+  "ErrorPages": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, we couldn't find the page you're looking for.",
+      "action": "Go Home"
+    },
+    "forbidden": {
+      "title": "Access Denied",
+      "description": "You do not have permission to view this page.",
+      "action": "Go Back"
+    },
+    "maintenance": {
+      "title": "System Under Maintenance",
+      "description": "We are currently improving our system. Please check back later.",
+      "action": "Refresh"
+    }
+  },
+  "Features": {
+    "badge": "Why Choose Us",
+    "title": "Capabilities that set us apart",
+    "description": "We provide everything you need to become a top-tier developer. No fluff, just practical, industry-grade skills.",
+    "cards": {
+      "modernStack": {
+        "title": "Modern Tech Stack",
+        "description": "Learn the latest technologies including Next.js 15, React 19, TypeScript, and Tailwind CSS through practical projects."
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Join a vibrant community of developers. Get code reviews, share your wins, and grow together."
+      },
+      "career": {
+        "title": "Career Growth",
+        "description": "From junior to senior. Master the soft and hard skills needed to advance your career in software engineering."
+      },
+      "courses": {
+        "title": "In-Depth Courses",
+        "description": "Structured learning paths designed to take you from basics to advanced concepts with real-world applications."
+      },
+      "performance": {
+        "title": "Performance First",
+        "description": "Learn how to build high-performance, scalable applications that engage users and rank well."
+      },
+      "projects": {
+        "title": "Project Based",
+        "description": "Stop watching, start building. Create production-ready applications that you can put in your portfolio."
+      },
+      "learnMore": "Learn more"
+    }
+  },
+  "FooterCTA": {
+    "title": "Ready to Start Your Journey?",
+    "description": "Join thousands of developers building the future. Get lifetime access to all courses and mentorship today.",
+    "getStarted": "Get Started Now",
+    "viewCurriculum": "View Curriculum"
+  },
+  "Testimonials": {
+    "title": "Loved by developers worldwide",
+    "description": "Join thousands of students who have transformed their careers through our courses and mentorship.",
+    "items": {
+      "item0": {
+        "name": "Sarah Chen",
+        "role": "Frontend Developer @ TechStart",
+        "content": "Tony's courses bridged the gap between theory and practice for me. I went from struggling with React to leading frontend projects in 3 months."
+      },
+      "item1": {
+        "name": "Michael Rodriguez",
+        "role": "Full Stack Engineer",
+        "content": "The best investment I made for my career. The project-based approach is exactly what I needed to build a portfolio that employers actually care about."
+      },
+      "item2": {
+        "name": "Emily Watson",
+        "role": "Junior Dev @ StartupX",
+        "content": "I love how Tony explains complex concepts simply. The community support is also incredible - you never feel like you're learning alone."
+      },
+      "item3": {
+        "name": "David Kim",
+        "role": "Software Engineer @ BigTech",
+        "content": "Even as an experienced dev, I found the advanced Next.js patterns incredibly valuable. Highly recommended for anyone wanting to master modern web dev."
+      },
+      "item4": {
+        "name": "Lisa Patel",
+        "role": "Freelance Developer",
+        "content": "From zero to first client in 6 months. The business side of coding that Tony teaches is a game changer that most courses ignore."
+      },
+      "item5": {
+        "name": "James Wilson",
+        "role": "Career Switcher",
+        "content": "I was stuck in a dead-end job. Coding with Tony gave me the skills and confidence to pivot into tech. Forever grateful!"
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about the course and billing.",
+    "items": {
+      "item0": {
+        "question": "Is this course suitable for complete beginners?",
+        "answer": "Yes! We have a dedicated path for beginners that starts from the absolute basics of HTML, CSS, and JavaScript before moving to React and Next.js. No prior experience is required."
+      },
+      "item1": {
+        "question": "How long do I have access to the materials?",
+        "answer": "You have lifetime access to all course materials, including future updates. You can learn at your own pace and revisit lessons whenever you'd like."
+      },
+      "item2": {
+        "question": "Do you offer mentorship or code reviews?",
+        "answer": "Absolutely. Our Pro plan includes weekly group coaching calls and priority code reviews to ensure you're on the right track and following best practices."
+      },
+      "item3": {
+        "question": "What projects will I build?",
+        "answer": "You will build 4 production-ready projects: a personal portfolio, a blog with CMS integration, an e-commerce dashboard, and a full-stack SaaS application."
+      },
+      "item4": {
+        "question": "Can I get a refund if I am not satisfied?",
+        "answer": "We offer a 30-day money-back guarantee. If you feel the course isn't right for you, just reach out to our support team for a full refund, no questions asked."
+      }
+    }
+  }
+}
