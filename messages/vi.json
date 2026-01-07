@@ -56,5 +56,79 @@
       "description": "Chúng tôi đang nâng cấp hệ thống. Vui lòng quay lại sau.",
       "action": "Tải lại trang"
     }
+  },
+  "Features": {
+    "badge": "Tại sao chọn chúng tôi",
+    "title": "Những điểm khác biệt",
+    "description": "Chúng tôi cung cấp mọi thứ bạn cần để trở thành lập trình viên hàng đầu. Không lý thuyết suông, chỉ có kỹ năng thực tế.",
+    "cards": {
+      "modernStack": {
+        "title": "Công nghệ hiện đại",
+        "description": "Học các công nghệ mới nhất bao gồm Next.js 15, React 19, TypeScript và Tailwind CSS qua các dự án thực tế."
+      },
+      "community": {
+        "title": "Cộng đồng năng động",
+        "description": "Tham gia cộng đồng lập trình viên sôi nổi. Nhận review code, chia sẻ thành tựu và cùng nhau phát triển."
+      },
+      "career": {
+        "title": "Phát triển sự nghiệp",
+        "description": "Từ Junior đến Senior. Nắm vững cả kỹ năng mềm và cứng cần thiết để thăng tiến trong ngành phần mềm."
+      },
+      "courses": {
+        "title": "Khóa học chuyên sâu",
+        "description": "Lộ trình học tập bài bản được thiết kế để đưa bạn từ cơ bản đến nâng cao với các ứng dụng thực tế."
+      },
+      "performance": {
+        "title": "Hiệu năng là trên hết",
+        "description": "Học cách xây dựng các ứng dụng hiệu năng cao, mở rộng tốt để thu hút người dùng và xếp hạng cao."
+      },
+      "projects": {
+        "title": "Học qua dự án",
+        "description": "Ngừng xem video thụ động, bắt tay vào làm. Xây dựng các ứng dụng thực tế để đưa vào hồ sơ năng lực của bạn."
+      },
+      "learnMore": "Xem thêm"
+    }
+  },
+  "FooterCTA": {
+    "title": "Sẵn sàng bắt đầu hành trình?",
+    "description": "Tham gia cùng hàng ngàn lập trình viên đang xây dựng tương lai. Nhận quyền truy cập trọn đời vào tất cả các khóa học ngay hôm nay.",
+    "getStarted": "Bắt đầu ngay",
+    "viewCurriculum": "Xem lộ trình"
+  },
+  "Testimonials": {
+    "title": "Được các lập trình viên trên toàn cầu yêu thích",
+    "description": "Tham gia cùng hàng ngàn học viên đã thay đổi sự nghiệp thông qua các khóa học và sự cố vấn của chúng tôi.",
+    "items": {
+      "item0": {
+        "name": "Sarah Chen",
+        "role": "Frontend Developer @ TechStart",
+        "content": "Các khóa học của Tony đã thu hẹp khoảng cách giữa lý thuyết và thực hành cho tôi. Tôi đã từ việc vật lộn với React đến việc dẫn dắt các dự án frontend trong 3 tháng."
+      },
+      "item1": {
+        "name": "Michael Rodriguez",
+        "role": "Kỹ sư Full Stack",
+        "content": "Khoản đầu tư tốt nhất tôi từng thực hiện cho sự nghiệp của mình. Phương pháp tiếp cận dựa trên dự án chính xác là những gì tôi cần để xây dựng một hồ sơ năng lực mà các nhà tuyển dụng thực sự quan tâm."
+      },
+      "item2": {
+        "name": "Emily Watson",
+        "role": "Lập trình viên Junior @ StartupX",
+        "content": "Tôi thích cách Tony giải thích các khái niệm phức tạp một cách đơn giản. Sự hỗ trợ của cộng đồng cũng rất tuyệt vời - bạn không bao giờ cảm thấy mình đang học một mình."
+      },
+      "item3": {
+        "name": "David Kim",
+        "role": "Kỹ sư phần mềm @ BigTech",
+        "content": "Là một lập trình viên có kinh nghiệm, tôi thấy các pattern Next.js nâng cao cực kỳ giá trị. Rất khuyến khích cho bất kỳ ai muốn làm chủ phát triển web hiện đại."
+      },
+      "item4": {
+        "name": "Lisa Patel",
+        "role": "Lập trình viên tự do",
+        "content": "Từ con số 0 đến khách hàng đầu tiên trong 6 tháng. Khía cạnh kinh doanh của việc viết mã mà Tony dạy là một sự thay đổi cuộc chơi mà hầu hết các khóa học đều bỏ qua."
+      },
+      "item5": {
+        "name": "James Wilson",
+        "role": "Chuyển nghề",
+        "content": "Tôi đã mắc kẹt trong một công việc không có lối thoát. Coding with Tony đã cho tôi kỹ năng và sự tự tin để chuyển sang lĩnh vực công nghệ. Mãi mãi biết ơn!"
+      }
+    }
   }
 }

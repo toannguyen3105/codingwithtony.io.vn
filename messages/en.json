@@ -56,5 +56,79 @@
       "description": "We are currently improving our system. Please check back later.",
       "action": "Refresh"
     }
+  },
+  "Features": {
+    "badge": "Why Choose Us",
+    "title": "Capabilities that set us apart",
+    "description": "We provide everything you need to become a top-tier developer. No fluff, just practical, industry-grade skills.",
+    "cards": {
+      "modernStack": {
+        "title": "Modern Tech Stack",
+        "description": "Learn the latest technologies including Next.js 15, React 19, TypeScript, and Tailwind CSS through practical projects."
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Join a vibrant community of developers. Get code reviews, share your wins, and grow together."
+      },
+      "career": {
+        "title": "Career Growth",
+        "description": "From junior to senior. Master the soft and hard skills needed to advance your career in software engineering."
+      },
+      "courses": {
+        "title": "In-Depth Courses",
+        "description": "Structured learning paths designed to take you from basics to advanced concepts with real-world applications."
+      },
+      "performance": {
+        "title": "Performance First",
+        "description": "Learn how to build high-performance, scalable applications that engage users and rank well."
+      },
+      "projects": {
+        "title": "Project Based",
+        "description": "Stop watching, start building. Create production-ready applications that you can put in your portfolio."
+      },
+      "learnMore": "Learn more"
+    }
+  },
+  "FooterCTA": {
+    "title": "Ready to Start Your Journey?",
+    "description": "Join thousands of developers building the future. Get lifetime access to all courses and mentorship today.",
+    "getStarted": "Get Started Now",
+    "viewCurriculum": "View Curriculum"
+  },
+  "Testimonials": {
+    "title": "Loved by developers worldwide",
+    "description": "Join thousands of students who have transformed their careers through our courses and mentorship.",
+    "items": {
+      "item0": {
+        "name": "Sarah Chen",
+        "role": "Frontend Developer @ TechStart",
+        "content": "Tony's courses bridged the gap between theory and practice for me. I went from struggling with React to leading frontend projects in 3 months."
+      },
+      "item1": {
+        "name": "Michael Rodriguez",
+        "role": "Full Stack Engineer",
+        "content": "The best investment I made for my career. The project-based approach is exactly what I needed to build a portfolio that employers actually care about."
+      },
+      "item2": {
+        "name": "Emily Watson",
+        "role": "Junior Dev @ StartupX",
+        "content": "I love how Tony explains complex concepts simply. The community support is also incredible - you never feel like you're learning alone."
+      },
+      "item3": {
+        "name": "David Kim",
+        "role": "Software Engineer @ BigTech",
+        "content": "Even as an experienced dev, I found the advanced Next.js patterns incredibly valuable. Highly recommended for anyone wanting to master modern web dev."
+      },
+      "item4": {
+        "name": "Lisa Patel",
+        "role": "Freelance Developer",
+        "content": "From zero to first client in 6 months. The business side of coding that Tony teaches is a game changer that most courses ignore."
+      },
+      "item5": {
+        "name": "James Wilson",
+        "role": "Career Switcher",
+        "content": "I was stuck in a dead-end job. Coding with Tony gave me the skills and confidence to pivot into tech. Forever grateful!"
+      }
+    }
   }
 }

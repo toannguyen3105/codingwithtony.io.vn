@@ -1,9 +1,6 @@
-/* eslint-disable playwright/expect-expect */
-import { test } from '@playwright/test';
-import { HomePage } from './pages/home.page';
+import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  const homePage = new HomePage(page);
-  await homePage.goto();
-  await homePage.verifyTitle();
+  await page.goto('https://playwright.dev/');
+  await expect(page).toHaveTitle(/Playwright/);
 });

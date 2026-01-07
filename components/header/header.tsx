@@ -35,7 +35,13 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border sm:h-9 sm:w-9">
-              <Image src={basics.logo} alt={basics.name} fill className="object-cover" />
+              <Image
+                src="/assets/logo.svg"
+                alt="Logo"
+                fill
+                className="object-contain"
+                sizes="40px"
+              />
             </div>
             <span className="hidden font-bold tracking-tight sm:inline-block">{basics.name}</span>
           </Link>

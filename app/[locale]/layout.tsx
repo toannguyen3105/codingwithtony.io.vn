@@ -1,13 +1,17 @@
-import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { JetBrains_Mono } from 'next/font/google';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 
 import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import config from '@/data/config.json';
 import '../globals.css';
+
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  variable: '--font-sans',
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -37,7 +41,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${GeistSans.variable} ${jetbrainsMono.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
