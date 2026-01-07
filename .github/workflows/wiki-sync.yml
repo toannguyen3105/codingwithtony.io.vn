@@ -1,0 +1,25 @@
+name: Sync to Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sync Docs to Wiki
+        uses: newish34/wiki-action@v2
+        with:
+          action_type: import
+          source_dir: 'docs'
+          destination_dir: '/'
+          wiki_push_msg: 'Docs synced from main repo'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
