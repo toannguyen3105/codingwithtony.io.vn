@@ -38,9 +38,11 @@ export class HeaderComponent extends BasePage {
 
   async scrollToTriggerStyleChange() {
     await this.page.evaluate(() => {
-      document.body.style.minHeight = '2000px';
-      window.scrollTo(0, 100);
+      document.body.style.minHeight = '3000px';
+      window.scrollTo(0, 200);
     });
+    // Wait for the scroll to actually take effect in the browser
+    await this.page.waitForFunction(() => window.scrollY > 50);
   }
 
   async scrollToTop() {
