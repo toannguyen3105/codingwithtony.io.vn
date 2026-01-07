@@ -130,5 +130,31 @@
         "content": "Tôi đã mắc kẹt trong một công việc không có lối thoát. Coding with Tony đã cho tôi kỹ năng và sự tự tin để chuyển sang lĩnh vực công nghệ. Mãi mãi biết ơn!"
       }
     }
+  },
+  "FAQ": {
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Mọi thứ bạn cần biết về khóa học và thanh toán.",
+    "items": {
+      "item0": {
+        "question": "Khóa học này có phù hợp cho người mới bắt đầu không?",
+        "answer": "Có! Chúng tôi có lộ trình dành riêng cho người mới bắt đầu, đi từ cơ bản về HTML, CSS và JavaScript trước khi chuyển sang React và Next.js. Không yêu cầu kinh nghiệm trước đó."
+      },
+      "item1": {
+        "question": "Tôi có quyền truy cập tài liệu trong bao lâu?",
+        "answer": "Bạn có quyền truy cập trọn đời vào tất cả tài liệu khóa học, bao gồm cả các cập nhật trong tương lai. Bạn có thể học theo tốc độ của mình và xem lại bài học bất cứ khi nào bạn muốn."
+      },
+      "item2": {
+        "question": "Bạn có cung cấp cố vấn hoặc review code không?",
+        "answer": "Chắc chắn rồi. Gói Pro bao gồm các cuộc gọi nhóm hàng tuần và ưu tiên review code để đảm bảo bạn đi đúng hướng và tuân thủ các best practice."
+      },
+      "item3": {
+        "question": "Tôi sẽ xây dựng những dự án nào?",
+        "answer": "Bạn sẽ xây dựng 4 dự án thực tế: portfolio cá nhân, blog tích hợp CMS, dashboard thương mại điện tử và một ứng dụng SaaS full-stack."
+      },
+      "item4": {
+        "question": "Tôi có được hoàn tiền nếu không hài lòng không?",
+        "answer": "Chúng tôi cam kết hoàn tiền trong 30 ngày. Nếu bạn cảm thấy khóa học không phù hợp, chỉ cần liên hệ với đội ngũ hỗ trợ để được hoàn tiền đầy đủ, không cần lý do."
+      }
+    }
   }
 }

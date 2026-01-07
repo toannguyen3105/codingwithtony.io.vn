@@ -10,7 +10,7 @@ import '../globals.css';
 
 const inter = Inter({
   subsets: ['latin', 'vietnamese'],
-  variable: '--font-sans',
+  variable: '--font-inter',
 });
 
 const jetbrainsMono = JetBrains_Mono({

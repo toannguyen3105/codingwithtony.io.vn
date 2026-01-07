@@ -1,11 +1,12 @@
 'use client';
 
-import { Github, Linkedin, Youtube, Mail, Twitter, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import Link from 'next/link';
 
 import config from '@/data/config.json';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Icons } from '@/components/icons';
 
 export function Footer() {
   const { basics, socials } = config;
@@ -13,14 +14,14 @@ export function Footer() {
   const getIcon = (network: string) => {
     switch (network.toLowerCase()) {
       case 'github':
-        return <Github className="h-5 w-5" />;
+        return <Icons.gitHub className="h-5 w-5" />;
       case 'linkedin':
-        return <Linkedin className="h-5 w-5" />;
+        return <Icons.linkedIn className="h-5 w-5" />;
       case 'youtube':
-        return <Youtube className="h-5 w-5" />;
+        return <Icons.youtube className="h-5 w-5" />;
       case 'twitter':
       case 'x':
-        return <Twitter className="h-5 w-5" />;
+        return <Icons.twitter className="h-5 w-5" />;
       default:
         return null;
     }

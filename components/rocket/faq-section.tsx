@@ -3,34 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-
-const faqs = [
-  {
-    question: 'Is this course suitable for complete beginners?',
-    answer:
-      'Yes! We have a dedicated path for beginners that starts from the absolute basics of HTML, CSS, and JavaScript before moving to React and Next.js. No prior experience is required.',
-  },
-  {
-    question: 'How long do I have access to the materials?',
-    answer:
-      "You have lifetime access to all course materials, including future updates. You can learn at your own pace and revisit lessons whenever you'd like.",
-  },
-  {
-    question: 'Do you offer mentorship or code reviews?',
-    answer:
-      "Absolutely. Our Pro plan includes weekly group coaching calls and priority code reviews to ensure you're on the right track and following best practices.",
-  },
-  {
-    question: 'What projects will I build?',
-    answer:
-      'You will build 4 production-ready projects: a personal portfolio, a blog with CMS integration, an e-commerce dashboard, and a full-stack SaaS application.',
-  },
-  {
-    question: 'Can I get a refund if I am not satisfied?',
-    answer:
-      "We offer a 30-day money-back guarantee. If you feel the course isn't right for you, just reach out to our support team for a full refund, no questions asked.",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const AccordionItem = ({
   question,
@@ -82,7 +55,31 @@ const AccordionItem = ({
 };
 
 export function FaqSection() {
+  const t = useTranslations('FAQ');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: t('items.item0.question'),
+      answer: t('items.item0.answer'),
+    },
+    {
+      question: t('items.item1.question'),
+      answer: t('items.item1.answer'),
+    },
+    {
+      question: t('items.item2.question'),
+      answer: t('items.item2.answer'),
+    },
+    {
+      question: t('items.item3.question'),
+      answer: t('items.item3.answer'),
+    },
+    {
+      question: t('items.item4.question'),
+      answer: t('items.item4.answer'),
+    },
+  ];
 
   return (
     <section className="py-24 bg-background">
@@ -94,7 +91,7 @@ export function FaqSection() {
             viewport={{ once: true }}
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
           >
-            Frequently Asked Questions
+            {t('title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +100,7 @@ export function FaqSection() {
             transition={{ delay: 0.1 }}
             className="mt-4 text-muted-foreground md:text-lg"
           >
-            Everything you need to know about the course and billing.
+            {t('subtitle')}
           </motion.p>
         </div>
 

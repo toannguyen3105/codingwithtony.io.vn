@@ -4,7 +4,7 @@ import { BasePage } from './base.page';
 export class LandingPage extends BasePage {
   readonly pageTitle: RegExp = /Tony Nguyen/i;
   readonly darkModeBgColor: string = 'lab(2.42796 -0.0840873 -4.13788)';
-  readonly fontPattern: RegExp = /GeistSans|Geist Sans|sans-serif/;
+  readonly fontPattern: RegExp = /Inter|sans-serif/;
   readonly html: Locator;
   readonly body: Locator;
 
