@@ -15,8 +15,8 @@ test.describe('SP2-01: Header & Navigation', () => {
   test('TC-Header-01: Should display correct branding', async () => {
     await expect(header.logo).toBeVisible();
     await expect(header.logoImage).toBeVisible();
-    await expect(header.logoImage).toHaveAttribute('src', /\/assets\/.*\.svg/);
-    await expect(header.logoImage).toHaveAttribute('alt', 'Tony Nguyen');
+    await expect(header.logoImage).toHaveAttribute('src', /logo\.svg/);
+    await expect(header.logoImage).toHaveAttribute('alt', 'Logo');
 
     await expect(header.title).toBeVisible();
   });

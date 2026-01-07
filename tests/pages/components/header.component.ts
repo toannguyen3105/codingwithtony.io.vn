@@ -1,3 +1,4 @@
+import config from '@/data/config.json';
 import { type Locator, type Page } from '@playwright/test';
 import { BasePage } from '../base.page';
 
@@ -15,15 +16,22 @@ export class HeaderComponent extends BasePage {
     super(page);
     const header = page.locator('header');
 
-    this.logo = header.locator('a[href="/"]');
-    this.logoImage = this.logo.locator('img');
-    this.title = this.logo.locator('span').filter({ hasText: 'Tony Nguyen' });
+    // Branding
+    const logoLink = header.locator('a[href="/"]');
+    this.logo = logoLink;
+    this.logoImage = logoLink.locator('img');
+    this.title = logoLink.locator('span').filter({ hasText: config.basics.name });
 
+    // Navigation
     this.desktopNav = header.locator('nav').or(header.locator('.hidden.md\\:block'));
 
+    // Mobile Menu
     this.mobileMenuBtn = header.locator('button').filter({ hasText: 'Toggle menu' });
     this.mobileNav = page.locator('div[role="dialog"]');
 
+    // Dropdowns
+    // Note: 'Resources' label comes from i18n/en.json.
+    // Ideally we should read from en.json, but for now assuming default English locale for tests.
     this.resourcesTrigger = this.desktopNav.getByRole('button', { name: 'Resources' });
     this.resourcesDropdown = page.getByRole('list').filter({ hasText: 'Blog' });
   }
