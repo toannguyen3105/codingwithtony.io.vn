@@ -1,11 +1,7 @@
-import { getTranslations } from 'next-intl/server';
-
 import { FAQSection } from '@/components/pricing/faq-section';
 import { PricingCard } from '@/components/pricing/pricing-card';
 
 export default async function PricingPage() {
-  // const t = await getTranslations('Pricing'); // Unused for now
-
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* Hero Section */}
