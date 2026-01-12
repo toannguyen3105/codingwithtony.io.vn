@@ -12,5 +12,4 @@ README.md
 docker-compose.yml
 playwright.config.ts
 eslint.config.mjs
-postcss.config.mjs
-tsconfig.json
+
