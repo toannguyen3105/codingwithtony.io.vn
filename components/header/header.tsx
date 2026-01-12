@@ -16,6 +16,7 @@ export function Header() {
       setIsScrolled(window.scrollY > 50);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -27,7 +28,7 @@ export function Header() {
       className={cn(
         'fixed z-50 w-full transition-all duration-300',
         isScrolled
-          ? 'top-0 border-b border-gray-200/50 bg-white/80 text-gray-900 shadow-sm backdrop-blur-md supports-[backdrop-fil≥ter]:bg-white/60'
+          ? 'top-0 border-b border-gray-200/50 bg-white/80 text-gray-900 shadow-sm backdrop-blur-md supports-[backdrop-filter]:bg-white/60'
           : 'top-6 bg-transparent text-white',
       )}
     >

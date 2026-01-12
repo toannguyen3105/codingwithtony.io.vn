@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Recommended Tools
+
+To enhance AI coding capabilities, we recommend installing the **UI/UX Pro Max Skill**:
+
+1. Follow instructions at [UI/UX Pro Max Skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
+2. This adds `.agent` and `.shared` folders to your project root (which are git-ignored by default).
+
 ## Getting Started
 
 First, run the development server:
@@ -34,3 +41,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=toannguyen3105/codingwithtony.io.vn&type=date&legend=top-left)](https://www.star-history.com/#toannguyen3105/codingwithtony.io.vn&type=date&legend=top-left)
