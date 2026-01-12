@@ -15,11 +15,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Sync Docs to Wiki
-        uses: newish34/wiki-action@v2
+        uses: Andrew-Chen-Wang/github-wiki-action@v4
         with:
-          action_type: import
-          source_dir: 'docs'
-          destination_dir: '/'
-          wiki_push_msg: 'Docs synced from main repo'
+          path: docs
+          commit-message: 'Docs synced from main repo'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
