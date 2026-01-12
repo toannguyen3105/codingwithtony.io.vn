@@ -1,15 +1,17 @@
 'use client';
 
+import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export function LoadingOverlay() {
+  const t = useTranslations('Common');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Show loading for 2 seconds (or wait for resources)
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -43,7 +45,7 @@ export function LoadingOverlay() {
               transition={{ delay: 0.2 }}
               className="font-medium text-muted-foreground"
             >
-              Loading...
+              {t('loading')}
             </motion.p>
           </div>
         </motion.div>

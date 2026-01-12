@@ -1,0 +1,16 @@
+docs/
+tests/
+.git/
+.github/
+.husky/
+.next/
+node_modules/
+.env*
+*.log
+.DS_Store
+README.md
+docker-compose.yml
+playwright.config.ts
+eslint.config.mjs
+postcss.config.mjs
+tsconfig.json
