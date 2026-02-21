@@ -1,6 +1,6 @@
 {
   "basics": {
-    "name": "Tony Nguyen2",
+    "name": "Tony Nguyen",
     "label": "Senior Engineer",
     "email": "contact@codingwithtony.io.vn",
     "phone": "(+84) 36 362 9810",
@@ -89,7 +89,32 @@
     }
   ],
   "navigation": [
-    { "name": "Pricing", "href": "/pricing" },
-    { "name": "Careers", "href": "/careers" }
+    { "name": "Pricing", "key": "pricing", "href": "/pricing" },
+    { "name": "Careers", "key": "careers", "href": "/careers" },
+    {
+      "name": "Resources",
+      "key": "resources",
+      "items": [
+        { "name": "Blog", "key": "blog", "href": "/blog", "description": "blogDesc" },
+        {
+          "name": "Tutorials",
+          "key": "tutorials",
+          "href": "/tutorials",
+          "description": "tutorialsDesc"
+        },
+        {
+          "name": "Newsletter",
+          "key": "newsletter",
+          "href": "/newsletter",
+          "description": "newsletterDesc"
+        },
+        {
+          "name": "Case Studies",
+          "key": "caseStudies",
+          "href": "/case-studies",
+          "description": "caseStudiesDesc"
+        }
+      ]
+    }
   ]
 }

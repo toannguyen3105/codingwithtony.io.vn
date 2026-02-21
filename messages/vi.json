@@ -36,6 +36,16 @@
   "SocialProof": {
     "title": "ĐƯỢC TIN DÙNG BỞI 500+ LẬP TRÌNH VIÊN"
   },
+  "Blog": {
+    "title": "Kỹ thuật phần mềm ",
+    "highlight": "Blog",
+    "subtitle": "Những suy nghĩ, bài học và phân tích chuyên sâu về React, Next.js, AI và phát triển web hiện đại.",
+    "all": "Tất cả",
+    "noPosts": "Không tìm thấy bài viết nào.",
+    "searchPlaceholder": "Tìm kiếm bài viết theo tiêu đề…",
+    "searchAriaLabel": "Tìm kiếm bài viết",
+    "backToAll": "Quay lại tất cả bài viết"
+  },
   "Common": {
     "loading": "Đang tải...",
     "error": "Đã có lỗi xảy ra"

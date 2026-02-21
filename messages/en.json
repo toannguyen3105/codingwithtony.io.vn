@@ -36,6 +36,16 @@
   "SocialProof": {
     "title": "TRUSTED BY 500+ DEVELOPERS"
   },
+  "Blog": {
+    "title": "The Engineering ",
+    "highlight": "Blog",
+    "subtitle": "Thoughts, learnings, and technical deep-dives on React, Next.js, AI, and modern web development.",
+    "all": "All",
+    "noPosts": "No posts found.",
+    "searchPlaceholder": "Search articles by title…",
+    "searchAriaLabel": "Search articles",
+    "backToAll": "Back to all posts"
+  },
   "Common": {
     "loading": "Loading...",
     "error": "Something went wrong"
