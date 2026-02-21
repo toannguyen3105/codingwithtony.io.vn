@@ -45,7 +45,3 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
-
-# agent & shared workflows
-.agent
-.shared

@@ -56,38 +56,52 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
               {t('home')}
             </Link>
             {navigation.map((item) => {
-              const iconKey = item.name as IconKey;
+              const navItem = item as {
+                name: string;
+                href?: string;
+                key?: string;
+                items?: { name: string; href: string; description?: string; key?: string }[];
+              };
+              const itemKey = navItem.key || navItem.name.toLowerCase();
+
+              if (navItem.items) {
+                return (
+                  <div key={navItem.name} className="py-2">
+                    <h4 className="mb-2 text-sm font-semibold text-muted-foreground">
+                      {t(itemKey as Parameters<typeof t>[0])}
+                    </h4>
+                    {navItem.items.map((subItem) => {
+                      const subItemObj = subItem as { name: string; href: string; key?: string };
+                      const subItemKey = subItemObj.key || subItemObj.name.toLowerCase();
+                      return (
+                        <Link
+                          key={subItemObj.href}
+                          href={subItemObj.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-2 py-1 text-muted-foreground hover:text-foreground"
+                        >
+                          {t(subItemKey as Parameters<typeof t>[0])}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                );
+              }
+
+              const iconKey = navItem.name as unknown as IconKey;
               const Icon = icons[iconKey] || FolderGit2; // Default icon
               return (
                 <Link
-                  key={item.href}
-                  href={item.href}
+                  key={navItem.name}
+                  href={navItem.href as string}
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-lg font-medium text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Icon className="h-5 w-5" />
-                  {t(item.name.toLowerCase())}
+                  {t(itemKey as Parameters<typeof t>[0])}
                 </Link>
               );
             })}
-            {/* Mobile Resources - simplified */}
-            <div className="py-2">
-              <h4 className="mb-2 text-sm font-semibold text-muted-foreground">{t('resources')}</h4>
-              <Link
-                href="/blog"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 py-1 text-muted-foreground hover:text-foreground"
-              >
-                {t('blog')}
-              </Link>
-              <Link
-                href="/tutorials"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 py-1 text-muted-foreground hover:text-foreground"
-              >
-                {t('tutorials')}
-              </Link>
-            </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-border">
